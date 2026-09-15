@@ -37,6 +37,10 @@ public class Goals {
     public double getCost() {
         return cost;
     }
+
+    public void setCost(double cost){
+        this.cost = cost;
+    }
     
 
 }
