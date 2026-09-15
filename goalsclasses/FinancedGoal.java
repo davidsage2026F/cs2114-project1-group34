@@ -1,4 +1,4 @@
-package goalsinvestmentclasses;
+package goalsclasses;
 
 public class FinancedGoal {
     
