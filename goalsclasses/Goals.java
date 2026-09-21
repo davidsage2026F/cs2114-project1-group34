@@ -30,7 +30,7 @@ public class Goals {
 
     // Methods
     /*
-        @return name 
+        @return String 
         - name of the goal
     */
     public String getName() {
@@ -44,7 +44,7 @@ public class Goals {
         return transfersToNextMonth;
     }
     /*
-        @return goalMet
+        @return boolean
         - boolean on if the goal has been completed
     */
     public boolean goalMet() {
@@ -57,7 +57,7 @@ public class Goals {
         goalMet = true;
     }
     /*
-        @return cost 
+        @return double 
         - gives the cost of the goal
     */
     public double getCost() {
@@ -71,6 +71,5 @@ public class Goals {
     public void setCost(double cost){
         this.cost = cost;
     }
-    
 
 }
