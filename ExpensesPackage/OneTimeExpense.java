@@ -1,7 +1,7 @@
 package ExpensesPackage;
 
 /*
-    Subclass of Expenses 
+    Subclass of Expenses designed for users to track one time expenses. 
  */
 public class OneTimeExpense extends Expenses{
 
@@ -13,10 +13,9 @@ public class OneTimeExpense extends Expenses{
     /*
         Constructs OneTimeExpense objects that the user pays off in one payment. 
     */
-    public OneTimeExpense(String name, boolean paidOff, boolean transfersToNextMonth, 
-        boolean isNeeded, String dateDue, double balance){
+    public OneTimeExpense(String name, boolean isNeeded, String dateDue, double balance){
             
-            super(name, paidOff, transfersToNextMonth, isNeeded, dateDue, balance);
+            super(name, false, false, isNeeded, dateDue, balance);
             
             this.cost = balance;
     }

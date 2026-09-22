@@ -1,34 +1,23 @@
 package ExpensesPackage;
 /*
-    Subclass of Expenses
+    Subclass of Expenses to keep track of recurring expenses. 
 */
 
 public class RecurringExpense extends Expenses{
     
 
     //Fields 
-    private int durationInMonths;
     private double monthlyPayment;
 
     //Constructor 
-    public RecurringExpense(String name, boolean paidOff, boolean transfersToNextMonth, 
-        boolean isNeeded, String dateDue, double balance, int durationInMonths, double monthlyPayment){
+    public RecurringExpense(String name, boolean isNeeded, String dateDue, double monthlyPayment){
         
-        super(name, paidOff, transfersToNextMonth, isNeeded, dateDue, balance);
+        super(name, false, true, isNeeded, dateDue, monthlyPayment);
 
-        this.durationInMonths = durationInMonths;
         this.monthlyPayment = monthlyPayment;
 
     }
     //Methods
-
-    /*
-        @return durationInMonths - how long the 
-        recurring expense lasts for
-    */
-    public int getDurationInMonths(){
-        return durationInMonths;
-    }
     /*
         @return monthlyPayment - the monthly payment
         required for a recurring expense

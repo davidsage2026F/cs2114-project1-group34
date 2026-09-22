@@ -2,7 +2,7 @@ package ExpensesPackage;
 
 /*
     The Expenses class acts as the parent class containing the 
-    fields and methods provided for subclasses. 
+    fields and methods provided for all expenses subclasses. 
 
 */
 public class Expenses {
@@ -27,6 +27,12 @@ public class Expenses {
             this.balance = balance;
 
     }
+    /*
+        Alternative constuctor for financedExpense with no dateDue.
+    */
+        public Expenses(String name, boolean paidOff, boolean transfersToNextMonth, boolean isNeeded, double balance) {
+        this(name, paidOff, transfersToNextMonth, isNeeded, "", balance);
+        }
 
     //Methods 
 
