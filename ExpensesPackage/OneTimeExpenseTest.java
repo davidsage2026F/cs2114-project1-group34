@@ -2,7 +2,9 @@ package ExpensesPackage;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+/*
+    Tests methods in OneTimeExpense
+ */
 public class OneTimeExpenseTest {
 
 
