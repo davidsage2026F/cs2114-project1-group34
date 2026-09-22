@@ -41,7 +41,7 @@ public class Investments extends Goals{
 
     public double[] calculateInvestment(int monthsIntoFuture) {
         double[] amounts = new double[10];
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 0; i <= 9; i++) {
             amounts[i] = monthAmount((monthsIntoFuture / 10) * i);
         }
         return amounts;

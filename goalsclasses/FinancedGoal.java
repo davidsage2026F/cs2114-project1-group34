@@ -23,7 +23,7 @@ public class FinancedGoal extends Goals {
     }
     // Methods
     private void calculateMonthly() {
-        monthlyAmount = (principleAmount * interestRate * (duration / 12) + principleAmount) / duration;
+        monthlyAmount = (principleAmount * interestRate * (duration / 12.0) + principleAmount) / duration;
     }
 
     public void generatePlan(double interestRate, int duration, double moneyDown) throws UnsupportedOperationException {
@@ -50,7 +50,7 @@ public class FinancedGoal extends Goals {
         return interestRate;
     }
 
-    public double getMothlyCost() {
+    public double getMonthlyCost() {
         return monthlyAmount;
     }
 
