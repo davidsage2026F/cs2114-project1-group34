@@ -292,7 +292,7 @@ public class User {
     }
 
     private void addFundingToGoal() {
-        // Only OneTimePurchase supports addFunding() per its class design.
+        // Only OneTimePurchase supports addFunding()
         ArrayList<OneTimePurchase> fundable = new ArrayList<>();
         for (Goals goal : goals) {
             if (goal instanceof OneTimePurchase oneTime) {
@@ -375,16 +375,10 @@ public class User {
         listInvestments();
         int index = readInt("Which investment number? ", 1, investments.size()) - 1;
         int months = readInt("Project how many months into the future? ", 1, 1200);
-        try {
-            double[] projection = investments.get(index).calculateInvestment(months);
-            for (int i = 0; i < projection.length; i++) {
+        
+        double[] projection = investments.get(index).calculateInvestment(months);
+        for (int i = 0; i < projection.length; i++) {
                 System.out.printf("Interval %d: $%.2f%n", i + 1, projection[i]);
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            // Known bug in Investments.calculateInvestment(): its loop runs one
-            // interval past the array bounds. Flagged for David to fix.
-            System.out.println("Couldn't generate the projection (a known bug in "
-                + "Investments.calculateInvestment() needs to be fixed).");
         }
     }
 
@@ -424,7 +418,6 @@ public class User {
         }
         return true;
     }
-
 
     // Input validation helpers
 

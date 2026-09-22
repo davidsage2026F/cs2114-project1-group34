@@ -1,10 +1,10 @@
-READM# CS 2114 Project 1 — Personal Finance CLI
+CS 2114 Project 1 — Budget Buddy
 
 **Group 34** — repo: `cs2114-project1-group34`
 
 ## Overview
 
-A command-line personal finance application written in Java. Users can create,
+Budget buddy is a command-line personal finance application written in Java. Users can create,
 save, and load a profile, then track financial goals and expenses through a menu-driven interface.
 
 ## Features
@@ -31,7 +31,7 @@ cs2114-project1-group34/
 │   ├── OneTimePurchase.java
 │   ├── RecurringPurchase.java
 │   ├── FinancedGoal.java
-│   └── Investment.java
+│   └── Investments.java
 └── ExpensesPackage/
     ├── Expenses.java          # Base class for expenses
     ├── OneTimeExpense.java
@@ -42,7 +42,7 @@ cs2114-project1-group34/
 ## Class Design
 
 - **`User`** — Opens the main menu, and handles creating, saving, and loading
-  a user profile (persisted as a text file).
+  a user profile.
 - **`Goals`** — Base class extended by `OneTimePurchase`, `RecurringPurchase`,
   `FinancedGoal`, and `Investment`.
 - **`Expenses`** — Base class extended by `OneTimeExpense`,
@@ -52,12 +52,12 @@ cs2114-project1-group34/
 
 1. Clone the repository:
    ```
-   git clone <repo-url>
+   git clone https://github.com/davidsage2026F/cs2114-project1-group34
    cd cs2114-project1-group34
    ```
 2. Open the project in VS Code (or your preferred Java IDE).
 3. Compile and run:
    ```
-   javac User.java goalsclasses/*.java ExpensesPackage/*.java
-   java User
+   javac -d out User.java ExpensesPackage/Expenses.java ExpensesPackage/OneTimeExpense.java ExpensesPackage/RecurringExpense.java ExpensesPackage/FinancedExpense.java goalsclasses/*.java
+   java -cp out User
    ```
